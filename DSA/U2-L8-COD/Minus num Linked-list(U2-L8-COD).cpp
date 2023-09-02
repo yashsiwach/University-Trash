@@ -1,3 +1,11 @@
+// input
+// 1
+// 2
+// 3
+// 4
+// -1
+// Output 1 :
+// Linked List: 1 2 3 4 
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;

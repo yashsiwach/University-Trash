@@ -1,10 +1,10 @@
+
 // Input 1 :
 // 5
-// 6 5 4 3 2
-// 1
+// 1 3 5 7 9
+// 4
 // Output 1 :
-// Created Linked list: 2 3 4 5 6 
-// Final List: 1 2 3 4 5 6 
+// 1 3 4 5 7 9 
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -52,6 +52,32 @@ void insertathead(node*&head,int val)
     newnode->next=head;
     head=newnode;
 }
+void insert_at_pos(node*&head,int val)
+{
+    node*newnode=new node(val);
+    node*temp=head;
+    if(temp->val>val)
+    {
+        insertathead(head,val);
+    }
+    else{
+    while(true)
+    {
+        if(temp->next!=NULL && temp->next->val>val) break;
+        else if(temp->next==NULL) break;
+        temp=temp->next;
+        
+    }
+    if(temp->next==NULL)
+    {
+        temp->next=newnode;
+    }
+    else{
+    newnode->next=temp->next;
+    temp->next=newnode;
+    }
+    }
+}
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -79,13 +105,11 @@ int main()
             curr=newnode;
         }
     }
-    int to_insert;
-    cin>>to_insert;
-    cout<<"Created Linked list: ";
-    print(head);
-    cout<<endl;
-    insertathead(head,to_insert);
-    cout<<"Final List: ";
+    //print(head);
+    //cout<<endl;
+    int va;
+    cin>>va;
+    insert_at_pos(head,va);
     print(head);
     
 }

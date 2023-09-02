@@ -1,3 +1,12 @@
+// Input 1 :
+// 5
+// 2 3 9 6 1
+// 3
+// 8
+// Output 1 :
+// 2 3 8 9 6 1 
+
+
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
