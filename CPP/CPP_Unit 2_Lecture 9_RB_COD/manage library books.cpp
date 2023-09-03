@@ -14,13 +14,8 @@ void checkBook(void* pricePtr, void* availabilityPtr) {
 int main() {
     float price;
     char availability;
-
-    printf("Enter the price of the book: ");
     scanf("%f", &price);
-
-    printf("Enter the availability (Y/y or N/n): ");
     scanf(" %c", &availability);
-
     checkBook(&price, &availability);
 
     return 0;
